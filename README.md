@@ -4,9 +4,9 @@ This is a tool for spoofing amiibo NFC tags using a PN532 NFC compatible reader/
 This is a very shallow clone of [pimiibo](https://github.com/garrett-davidson/pimiibo), all credits go to the original creator, I only made some edits to have it work on regular Linux.
 
 ## Hardware
-1. You can use any libnfc supported NFC reader/writer(like the always popular ACR122U)
+1. You can use any `libnfc` supported NFC reader/writer(like the always popular ACR122U)
 
-2. NTAG215 NFC tags  
+2. `NTAG215` NFC tags  
 
 ## Software setup
 
