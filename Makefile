@@ -1,13 +1,13 @@
-SOURCES = amiibo.cpp amiitool.cpp nfchandler.cpp pimiibo.cpp
+SOURCES = amiibo.cpp amiitool.cpp nfchandler.cpp nfc-amiibo.cpp
 
-all: pimiibo amiitoolsubmodule
+all: nfc-amiibo amiitoolsubmodule
 
-pimiibo: $(SOURCES)
-	$(CXX) $(CXXFlags) $(SOURCES) -o pimiibo -lnfc
+nfc-amiibo: $(SOURCES)
+	$(CXX) $(CXXFlags) $(SOURCES) -o $@ -lnfc
 
 amiitoolsubmodule:
 	cd amiitool && $(MAKE) amiitool
 
 clean:
-	rm pimiibo
+	rm nfc-amiibo
 	cd amiitool && $(MAKE) clean

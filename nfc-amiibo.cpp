@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 void printUsage() {
-  printf("pimiibo keyfile binfile\n");
+  printf("nfc-amiibo keyfile binfile\n");
 }
 
 int main(int argc, char** argv) {
