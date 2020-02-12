@@ -41,11 +41,11 @@ Once you see `***Scan tag***`, place and hold your blank NFC tag on the reader/w
 ## Common Problems
 
 * Failed to initialize adapter
-  ```
-  Initializing NFC adapter
-  error	libnfc.bus.i2c	Error: wrote only -1 bytes (10 expected).
-  ```
-  Your Pi could not find your NFC device. Double check your wiring and try again.
+```
+Initializing NFC adapter
+ERROR: Unable to open NFC device.
+``` 
+  Check that something like the PN533 driver or the pcscd daemon is blocking access to your reader. If you have `libnfc-bin` installed try `nfc-list` first. These are common problems with `libnfc` on Linux so you should first check that you can use `nfc-list` or any other common tool.
 
 * Failed to write a page
   ```
