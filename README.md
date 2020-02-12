@@ -12,7 +12,7 @@ This is a very shallow clone of [pimiibo](https://github.com/garrett-davidson/pi
 
 1. Clone this repository with submodules:
 
-    `git clone --recurse-submodules https://github.com/garrett-davidson/pimiibo.git`
+    `git clone --recurse-submodules https://github.com/crazyquark/nfc-amiibo.git`
 
 2. Install `libnfc-dev`:
 
