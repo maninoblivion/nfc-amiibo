@@ -41,11 +41,11 @@ Once you see `***Scan tag***`, place and hold your blank NFC tag on the reader/w
 ## Common Problems
 
 * Failed to initialize adapter
-```
-Initializing NFC adapter
-ERROR: Unable to open NFC device.
-``` 
-  Check that something like the PN533 driver or the pcscd daemon is blocking access to your reader. If you have `libnfc-bin` installed try `nfc-list` first. These are common problems with `libnfc` on Linux so you should first check that you can use `nfc-list` or any other common tool.
+  ```
+  Initializing NFC adapter
+  ERROR: Unable to open NFC device.
+  ``` 
+  Check that something like the PN533 driver or the pcscd daemon is blocking access to your reader. If you have `libnfc-bin` installed try `nfc-list` first. These are common problems with `libnfc` on Linux so you should first check that you can use `nfc-list` or any other common tool. You might also need to run with `sudo` if you do not have the right udev rules for the NFC reader.
 
 * Failed to write a page
   ```
