@@ -41,6 +41,10 @@ NFCHandler::NFCHandler() {
   printf("NFC reader: opened\n");
 }
 
+NFCHandler::~NFCHandler() {
+    nfc_close(device);
+}
+
 void NFCHandler::readTagUUID(uint8_t uuidBuffer[]) {
   printf("***Scan tag***\n");
 
