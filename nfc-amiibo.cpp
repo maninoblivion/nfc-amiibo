@@ -21,4 +21,7 @@ int main(int argc, char** argv) {
   NFCHandler *nfc = new NFCHandler();
 
   nfc->writeAmiibo(amiibo);
+
+  delete nfc;
+  delete amiibo;
 }
