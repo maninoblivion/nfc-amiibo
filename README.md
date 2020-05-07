@@ -52,7 +52,7 @@ Once you see `***Scan tag***`, place and hold your blank NFC tag on the reader/w
   blacklist nfc  
   blacklist pn533  
   ```  
-  This is effectively blocks thos modules from loading at boot, you could also do:
+  This is effectively blocks those modules from loading at boot, you could also do:
   ```
   sudo rmmod nfc && sudo rmmod pn533
   ```
