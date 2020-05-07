@@ -46,12 +46,18 @@ Once you see `***Scan tag***`, place and hold your blank NFC tag on the reader/w
   ERROR: Unable to open NFC device.
   ``` 
   Check that something like the PN533 driver or the pcscd daemon is blocking access to your reader. If you have `libnfc-bin` installed try `nfc-list` first. These are common problems with `libnfc` on Linux so you should first check that you can use `nfc-list` or any other common tool. You might also need to run with `sudo` if you do not have the right udev rules for the NFC reader.  
-  On my system I had to blacklist the `pn533` and `nfc` kernel modules by adding them a file(you can call it whatever you want.conf):  
+  On my system I had to blacklist the `pn533` and `nfc` kernel modules by adding them a file(you can call it whatever you want but it must have a .conf extension):  
   `/etc/modprobe.d/blacklist-libnfc.conf`:
   ```  
   blacklist nfc  
   blacklist pn533  
+  ```  
+  This is effectively blocks thos modules from loading at boot, you could also do:
   ```
+  sudo rmmod nfc && sudo rmmod pn533
+  ```
+  to temporarily remove these modules from the running kernel.  
+    
 * Failed to write a page
   ```
   Writing to 4: a5 b0 d1 00...Failed
